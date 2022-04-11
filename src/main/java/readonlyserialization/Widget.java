@@ -1,4 +1,5 @@
 package readonlyserialization;
+import io.micronaut.core.annotation.Creator;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ public class Widget {
     public Widget() {
     }
 
+    @Creator
     public Widget(String name) {
         this.name = name;
     }
